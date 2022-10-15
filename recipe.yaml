@@ -44,8 +44,7 @@ tasks:
     
   - action: move_path
     src: ./resources/[scripts]/LVC/dependencies
-    dest: ./resources/[scripts]
-    overwrite: true
+    dest: ./resources/[scripts]/RageUI
     
   - action: move_path
     src: ./resources/[scripts]/LVC/lvc
