@@ -50,6 +50,9 @@ tasks:
     src: ./resources/[scripts]/LVC/dependencies
     dest: ./resources/[scripts]/RageUI
     
+    action: waste_time
+    seconds: 10
+    
   - action: move_path
     src: ./resources/[scripts]/LVC/lvc
     dest: ./resources/[scripts]/LVC
