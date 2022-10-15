@@ -12,6 +12,10 @@ tasks:
     subpath: resources
     dest: ./resources
     
+  - action: download_file
+    url: https://raw.githubusercontent.com/error-reporter-cmd/FiveM-setup-Recipe/main/server.cfg
+    path: ./server.cfg
+    
   # Download vMenu
   - action: download_file
     url: https://github.com/TomGrobbe/vMenu/releases/download/v3.5.0/vMenu-v3.5.0.zip
