@@ -1,7 +1,6 @@
-$engine: 3
 $onesync: on
 name: Basic FiveM Setup Recipe with included scripts
-version: 1
+version: v1.0.0
 author: Mrtylergamer
 description: Basic Recipe Including DpEmotes, Luxart Vehicle Control, vMenu to make the developers job Easier (Hopefully)
 
