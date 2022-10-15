@@ -1,5 +1,17 @@
-# CFX-Default-recipe
-**Description:** Recipe for the base resources required to run a minimal FiveM server. 
+# FiveM-Development-Helper-Recipe
+**Description:** Recipe for the developer who doesn't want to set up a server the same way 30 times. 
+
+
+**Included Scripts:** dpemotes, Luxart Vehicle Control, vMenu
 
 This recipe runs inside [**txAdmin**](https://github.com/tabarra/txAdmin).  
-Please check the [**Recipe Documentation Page**](https://github.com/tabarra/txAdmin/blob/master/docs/recipe.md).
+
+Credits:
+
+@tabarra (Documentation and the core Template used to create this)
+
+@TayMcKenzieNZ (For the best Dpemotes ive seen : https://github.com/TayMcKenzieNZ/dpemotes)
+
+@TrevorBarns (For making Luxart Vehicle Control : https://github.com/TrevorBarns/luxart-vehicle-control)
+
+@TomGrobbe (For making vMenu "if you dont know what that is welcome to fivem" : https://github.com/TomGrobbe/vMenu)
