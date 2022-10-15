@@ -23,7 +23,8 @@ tasks:
     dest: ./resources/vMenu
 
   - action: download_github
-    src: TayMcKenzieNZ/dpemotes
+    src: https://github.com/TayMcKenzieNZ/dpemotes
+    ref: master
     dest: ./resources/[scripts]/dpemotes
   
   - action: replace_string
