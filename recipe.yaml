@@ -5,9 +5,6 @@ version: 1
 author: Mrtylergamer
 description: Basic Recipe Including DpEmotes, Luxart Vehicle Control, vMenu to make the developers job Easier (Hopefully)
 
-variables: 
-    Serverid (For lvc):
-
 tasks: 
   # Download default CFX resources 
   - action: download_github
@@ -58,7 +55,7 @@ tasks:
   - action: replace_string
     file: ./resources/[scripts]/LVC/SETTINGS.lua
     search: 'community_id = ""'
-    replace: 'community_id = "{{Serverid (For lvc)}}"'
+    replace: 'community_id = "{{serverName}}"'
     
   - action: replace_string
     file: ./resources/[scripts]/LVC/SETTINGS.lua
