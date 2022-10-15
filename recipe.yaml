@@ -25,6 +25,10 @@ tasks:
   - action: unzip
     src: ./tmp/vMenu-v3.5.zip
     dest: ./resources/vMenu
+    
+  - action: move_path
+    src: ./resources/vMenu/config/permissions.cfg
+    dest: ./permissions.cfg
 
   - action: download_github
     src: https://github.com/TayMcKenzieNZ/dpemotes
@@ -49,10 +53,7 @@ tasks:
   - action: move_path
     src: ./tmp/LVC/dependencies
     dest: ./resources/[scripts]/RageUI
-    
-  - action: waste_time
-    seconds: 10
-    
+
   - action: move_path
     src: ./tmp/LVC/lvc
     dest: ./resources/[scripts]/LVC
