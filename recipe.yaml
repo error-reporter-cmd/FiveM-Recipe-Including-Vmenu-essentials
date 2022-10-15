@@ -48,7 +48,7 @@ tasks:
      # Unzips and places vMenu on resources folder 
   - action: unzip
     src: ./tmp/LVC.zip
-    dest: ./tmp/LVC
+    dest: ./tmp/lvc
     
   - action: move_path
     src: ./tmp/LVC/dependencies/RageUI/
