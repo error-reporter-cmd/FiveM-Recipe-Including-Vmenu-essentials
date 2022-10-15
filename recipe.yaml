@@ -58,7 +58,7 @@ tasks:
   - action: replace_string
     file: ./resources/[scripts]/LVC/SETTINGS.lua
     search: 'community_id = ""'
-    replace: 'community_id = "{{serverName}}"'
+    replace: 'community_id = "{{deploymentID}}"'
     
   - action: replace_string
     file: ./resources/[scripts]/LVC/SETTINGS.lua
