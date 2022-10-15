@@ -48,7 +48,7 @@ tasks:
     
   - action: move_path
     src: ./resources/[scripts]/LVC/lvc
-    dest: ./resources/[scripts]LVC
+    dest: ./resources/[scripts]/LVC
     overwrite: true
     
   - action: replace_string
