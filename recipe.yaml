@@ -52,7 +52,7 @@ tasks:
     
   - action: move_path
     src: ./tmp/LVC/dependencies/RageUI/
-    dest: ./resources/[scripts]/
+    dest: ./resources/[scripts]/RageUI
 
   - action: move_path
     src: ./tmp/LVC/lvc
