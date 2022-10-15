@@ -1,19 +1,67 @@
 $engine: 3
 $onesync: on
-name: CFX Default
-version: 3.3.0
-author: Tabarra
-description: Recipe for the base resources required to run a minimal FiveM server.
+name: Basic FiveM Setup Recipe with included scripts
+version: 1
+author: Mrtylergamer
+description: Basic Recipe Including DpEmotes, Luxart Vehicle Control, vMenu to make the developers job Easier (Hopefully)
+
+variables: 
+    Serverid (For lvc):
 
 tasks: 
-  # Download default CFX resources
+  # Download default CFX resources 
   - action: download_github
     src: https://github.com/citizenfx/cfx-server-data
     ref: master
     subpath: resources
     dest: ./resources
-
-  # Download default server.cfg
+    
+  # Download vMenu
   - action: download_file
-    url: https://raw.githubusercontent.com/tabarra/CFX-Default-recipe/main/server.cfg
-    path: ./server.cfg
+    url: https://github.com/TomGrobbe/vMenu/releases/download/v3.5.0/vMenu-v3.5.0.zip
+    path: ./tmp/vMenu-v3.5.zip
+  
+ # Unzips and places vMenu on resources folder 
+ - action: unzip
+   src: ./tmp/vMenu-v3.5.zip
+   dest: ./resources/vMenu
+
+- action: download_github
+  src: TayMcKenzieNZ/dpemotes
+  dest: ./resources/[scripts]/dpemotes
+  
+- action: replace_string
+  file: ./resources/[scripts]/dpemotes/config.lua
+  search: 'AdultEmotesDisabled = false,'
+  replace: 'AdultEmotesDisabled = true,'
+  
+    # Download LVC
+- action: download_file
+  url:   https://github.com/TrevorBarns/luxart-vehicle-control/releases/download/3.2.9/Luxart.Vehicle.Control.v3.2.9-Rev1.zip
+  path: ./tmp/vMenu-v3.5.zip
+    
+   # Unzips and places vMenu on resources folder 
+- action: unzip
+  src: ./tmp/Luxart.Vehicle.Control.v3.2.9-Rev1.zip
+  dest: ./resources/LVC
+  
+- action: move_path
+  src: ./resources/[scripts]/LVC/dependencies
+  dest: ./resources/[scripts]
+  overwrite: true
+  
+- action: move_path
+  src: ./resources/[scripts]/LVC/lvc
+  dest: ./resources/[scripts]LVC
+  overwrite: true
+  
+- action: replace_string
+  file: ./resources/[scripts]/LVC/SETTINGS.lua
+  search: 'community_id = '''
+  replace: 'community_id = '{{Serverid (For lvc)}}''
+  
+- action: replace_string
+  file: ./resources/[scripts]/LVC/SETTINGS.lua
+  search: 'park_kill_default = false'
+  replace: 'park_kill_default = true'
+  
