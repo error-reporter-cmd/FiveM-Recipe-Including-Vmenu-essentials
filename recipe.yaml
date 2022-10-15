@@ -35,11 +35,11 @@ tasks:
     # Download LVC
   - action: download_file
     url:   https://github.com/TrevorBarns/luxart-vehicle-control/releases/download/3.2.9/Luxart.Vehicle.Control.v3.2.9-Rev1.zip
-    path: ./tmp/Luxart.Vehicle.Control.v3.2.9-Rev1.zip
+    path: ./tmp/LVC.zip
       
      # Unzips and places vMenu on resources folder 
   - action: unzip
-    src: ./tmp/Luxart.Vehicle.Control.v3.2.9-Rev1.zip
+    src: ./tmp/LVC.zip
     dest: ./resources/LVC
     
   - action: move_path
