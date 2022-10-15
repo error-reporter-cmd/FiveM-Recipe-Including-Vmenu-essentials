@@ -2,7 +2,7 @@ $onesync: on
 name: Basic FiveM Setup Recipe with included scripts
 version: v1.0.0
 author: Mrtylergamer
-description: Basic Recipe Including DpEmotes, Luxart Vehicle Control, vMenu to make the developers job Easier (Hopefully)
+description: "Recipe for the developer who doesn't want to set up a server the same way 30 times."
 
 tasks: 
   # Download default CFX resources 
