@@ -44,17 +44,17 @@ tasks:
      # Unzips and places vMenu on resources folder 
   - action: unzip
     src: ./tmp/LVC.zip
-    dest: ./resources/[scripts]/LVC
+    dest: ./tmp/LVC
     
   - action: move_path
-    src: ./resources/[scripts]/LVC/dependencies
+    src: ./tmp/LVC/dependencies
     dest: ./resources/[scripts]/RageUI
     
     action: waste_time
     seconds: 10
     
   - action: move_path
-    src: ./resources/[scripts]/LVC/lvc
+    src: ./tmp/LVC/lvc
     dest: ./resources/[scripts]/LVC
     overwrite: true
     
