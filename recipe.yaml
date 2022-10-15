@@ -36,33 +36,4 @@ tasks:
   search: 'AdultEmotesDisabled = false,'
   replace: 'AdultEmotesDisabled = true,'
   
-    # Download LVC
-- action: download_file
-  url:   https://github.com/TrevorBarns/luxart-vehicle-control/releases/download/3.2.9/Luxart.Vehicle.Control.v3.2.9-Rev1.zip
-  path: ./tmp/vMenu-v3.5.zip
-    
-   # Unzips and places vMenu on resources folder 
-- action: unzip
-  src: ./tmp/Luxart.Vehicle.Control.v3.2.9-Rev1.zip
-  dest: ./resources/LVC
-  
-- action: move_path
-  src: ./resources/[scripts]/LVC/dependencies
-  dest: ./resources/[scripts]
-  overwrite: true
-  
-- action: move_path
-  src: ./resources/[scripts]/LVC/lvc
-  dest: ./resources/[scripts]LVC
-  overwrite: true
-  
-- action: replace_string
-  file: ./resources/[scripts]/LVC/SETTINGS.lua
-  search: "community_id = ''"
-  replace: "community_id = '{{Serverid (For lvc)}}'"
-  
-- action: replace_string
-  file: ./resources/[scripts]/LVC/SETTINGS.lua
-  search: 'park_kill_default = false'
-  replace: 'park_kill_default = true'
-  
+
