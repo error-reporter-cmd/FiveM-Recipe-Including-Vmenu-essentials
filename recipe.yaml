@@ -64,8 +64,8 @@ tasks:
     
   - action: replace_string
     file: ./resources/[scripts]/lvc/SETTINGS.lua
-    search: "community_id = ``"
-    replace: "community_id = `{{LVC-ID}}`"
+    search: "community_id = ''"
+    replace: "community_id = '{{LVC-ID}}'"
     
   - action: replace_string
     file: ./resources/[scripts]/lvc/SETTINGS.lua
