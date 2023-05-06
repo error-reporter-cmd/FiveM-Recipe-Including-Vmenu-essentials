@@ -34,12 +34,12 @@ tasks:
     dest: ./permissions.cfg
 
   - action: download_github
-    src: https://github.com/TayMcKenzieNZ/dpemotes
+    src: https://github.com/TayMcKenzieNZ/rpemotes
     ref: master
-    dest: ./resources/[scripts]/dpemotes
+    dest: ./resources/[scripts]rpemotes
   
   - action: replace_string
-    file: ./resources/[scripts]/dpemotes/config.lua
+    file: ./resources/[scripts]/rpemotes/config.lua
     search: 'AdultEmotesDisabled = false,'
     replace: 'AdultEmotesDisabled = true,'
   
